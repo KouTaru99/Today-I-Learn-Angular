@@ -1,0 +1,54 @@
+<div style="background-color: antiquewhite; padding: 16px;">
+  <!-- <h3>
+    <small>
+      <a href="javascript:void(0)" (click)="table.rowDetail.expandAllRows()">Expand All</a>
+      |
+      <a href="javascript:void(0)" (click)="table.rowDetail.collapseAllRows()">Collapse All</a>
+    </small>
+  </h3> -->
+  <ngx-datatable
+    #myTable
+    class="material expandable"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="50"
+    [scrollbarV]="true"
+    [rows]="dataSource"
+    (page)="onPage($event)"
+  >
+    <!-- Row Detail Template -->
+    <ngx-datatable-row-detail [rowHeight]="200" #myDetailRow (toggle)="onDetailToggle($event)">
+      <ng-template let-row="row" let-expanded="expanded" let-value="value" ngx-datatable-row-detail-template>
+        <div style="padding-left:35px;">
+          <app-single-datatable [dataSource]="row.group" [colConfigs]="colConfigChild"></app-single-datatable>
+        </div>
+      </ng-template>
+    </ngx-datatable-row-detail>
+
+    <!-- Column Templates -->
+    <ngx-datatable-column
+      [width]="50"
+      [resizeable]="false"
+      [sortable]="false"
+      [draggable]="false"
+      [canAutoResize]="false"
+    >
+      <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>
+        <div [class.datatable-icon-right]="!expanded"
+        [class.datatable-icon-down]="expanded"
+        title="Expand/Collapse Row"
+        (click)="toggleExpandRow(row)">
+          <img width="16" height="16" src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"/>
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column *ngFor="let col of colConfigs" name="{{col.name}}" prop="{{col.key}}" [width]="50">
+      <ng-template let-row="row" let-expanded="expanded" let-value = "value" ngx-datatable-cell-template>
+        <span>{{value}}</span>
+      </ng-template>
+    </ngx-datatable-column>
+
+
+  </ngx-datatable>
+</div>

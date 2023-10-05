@@ -1,0 +1,14 @@
+<ngx-datatable
+        class="material fullscreen"
+        style="top: 52px"
+        [columnMode]="ColumnMode.force"
+        [headerHeight]="50"
+        [footerHeight]="0"
+        [rowHeight]="50"
+        [scrollbarV]="true"
+        [scrollbarH]="true"
+        [rows]="dataSource"
+      >
+        <ngx-datatable-column *ngFor="let col of colConfigs" name="{{col.name}}" prop="{{col.key}}" [width]="80"></ngx-datatable-column>
+
+  </ngx-datatable>

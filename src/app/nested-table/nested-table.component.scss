@@ -1,0 +1,129 @@
+body {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  color: #212121;
+  background-color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  position: relative;
+}
+
+.ngx-datatable,
+.info {
+  text-align: left;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.info {
+  box-sizing: border-box;
+  padding: 0 1em;
+  border: solid 1px #ccc;
+  background: white;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+.ngx-datatable.scroll-vertical {
+  height: 70vh;
+}
+
+.selected-column {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+input[type='text'] {
+  font-size: 14px;
+  display: block;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #5264ae;
+}
+
+textarea {
+  font-size: 14px;
+  font-family: sans-serif;
+  display: block;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #5264ae;
+  resize: vertical;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+.expander-btn {
+  margin-top: 8px;
+  display: block;
+}
+
+h3 {
+  background: #1f89ff;
+  margin: 0 0 30px 0;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  overflow: hidden;
+  height: 32px;
+}
+
+h3 a {
+  color: #ccc;
+}
+
+h3 small {
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+
+.fullscreen {
+  position: absolute !important;
+  height: auto !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.selection-cell .datatable-body-cell.active {
+  background: #0829e0 !important;
+  color: #fff !important;
+}
+
+.selected-column {
+  float: right;
+  width: 20%;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.selected-column h4 {
+  text-align: center;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
