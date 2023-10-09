@@ -16,6 +16,7 @@ import { SingleDatatableComponent } from './single-datatable/single-datatable.co
 
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ShowTableGroupComponent } from './show-table-group/show-table-group.component';
+import { TableGroupComponent } from './table-group/table-group.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ShowTableGroupComponent } from './show-table-group/show-table-group.com
     NestedTableComponent,
     SingleDatatableComponent,
     ShowTableGroupComponent,
+    TableGroupComponent,
   ],
   imports: [
     BrowserModule,

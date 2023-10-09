@@ -1,3 +1,7 @@
+@import '/node_modules/@swimlane/ngx-datatable/index.css';
+@import '/node_modules/@swimlane/ngx-datatable/themes/material.scss';
+@import '/node_modules/@swimlane/ngx-datatable/assets/icons.css';
+
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -40,4 +44,29 @@ button:disabled {
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;
+}
+.datatable-row-detail { width: 100vw; }
+
+.ngx-datatable.material .datatable-body .datatable-group-header {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    background-color: #fff !important;
+    .custom-header {
+      display: flex !important;
+      align-items: center !important;
+      width: 100%;
+    }
+}
+.ngx-datatable.material .datatable-body .datatable-group-header:hover {
+  background-color: #ccc !important;
+
+  .actions-btn-container {
+    visibility: visible !important;
+  }
+}
+.ngx-datatable.material:not(.cell-selection) .datatable-body-row:hover {
+  .actions-btn-container {
+    visibility: visible !important;
+  }
 }
