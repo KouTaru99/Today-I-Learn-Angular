@@ -1,4 +1,4 @@
-<div>
+<div class="tml-table-wrapper" #tableWrapper>
   <ngx-datatable
     #myTable
     class="material expandable"
@@ -10,7 +10,7 @@
     [footerHeight]="0"
     [rowHeight]="80"
     [groupExpansionDefault]="true"
-    [autocapitalize]="true"
+    (resize)="onResize($event)"
   >
     <!-- Group Header Template -->
     <ngx-datatable-group-header [rowHeight]="50" #myGroupHeader (toggle)="onDetailToggle($event)">

@@ -12,6 +12,8 @@ export class NestedTableComponent implements OnChanges {
   @Input() colConfigs :any[] = []
   @Input() colConfigChild :any[] = []
   @ViewChild('myTable') table: any;
+  @ViewChild('accordionContainer') accordionContainer: any;
+
 
   rows: any[] = [];
   expanded: any = {};
@@ -51,5 +53,16 @@ export class NestedTableComponent implements OnChanges {
 
   onDetailToggle(event : any) {
     console.log('Detail Toggled', event);
+  }
+
+  getHeight() {
+    let height = this.accordionContainer;
+    console.log(height);
+
+    if (this.accordionContainer && this.accordionContainer.nativeElement.offsetHeight > 0) {
+      height = this.accordionContainer.nativeElement.offsetHeight;
+    }
+    this.rows = [...this.rows];
+    return height;
   }
 }

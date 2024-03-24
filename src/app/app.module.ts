@@ -17,6 +17,16 @@ import { SingleDatatableComponent } from './single-datatable/single-datatable.co
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ShowTableGroupComponent } from './show-table-group/show-table-group.component';
 import { TableGroupComponent } from './table-group/table-group.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { vi_VN } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import vi from '@angular/common/locales/vi';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IconsProviderModule } from './icons-provider.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+
+registerLocaleData(vi);
 
 @NgModule({
   declarations: [
@@ -40,9 +50,15 @@ import { TableGroupComponent } from './table-group/table-group.component';
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false })
+      InMemoryDataService, { dataEncapsulation: false }),
+    BrowserAnimationsModule,
+    IconsProviderModule,
+    NzLayoutModule,
+    NzMenuModule
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: vi_VN }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

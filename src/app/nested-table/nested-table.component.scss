@@ -33,6 +33,8 @@ body {
 
 .ngx-datatable.scroll-vertical {
   height: 70vh;
+  top: 80px !important;
+  max-height: 120px;
 }
 
 .selected-column {

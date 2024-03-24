@@ -17,6 +17,7 @@ export class ShowTableGroupComponent {
       "state": "South Carolina",
       "city": "Glendale"
     },
+    "Rheight": 100,
     "group": [
       {
         "id": 0,
@@ -49,6 +50,7 @@ export class ShowTableGroupComponent {
       "state": "Arizona",
       "city": "Beaverdale"
     },
+    "Rheight": 150,
     "group": [
       {
         "id": 0,
@@ -81,6 +83,7 @@ export class ShowTableGroupComponent {
       "state": "New Mexico",
       "city": "Grazierville"
     },
+    "Rheight": 100,
     "group": [
       {
         "id": 0,
@@ -113,6 +116,7 @@ export class ShowTableGroupComponent {
       "state": "Wisconsin",
       "city": "Saranap"
     },
+    "Rheight": 200,
     "group": [
       {
         "id": 0,
@@ -145,6 +149,7 @@ export class ShowTableGroupComponent {
       "state": "Vermont",
       "city": "Norris"
     },
+    "Rheight": 150,
     "group": [
       {
         "id": 0,
